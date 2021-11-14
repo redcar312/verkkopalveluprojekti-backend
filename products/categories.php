@@ -1,6 +1,6 @@
 <?php
-require_once './headers.php';
-require_once './functions.php';
+require_once '../headers.php';
+require_once '../functions.php';
 
 try {
     $db = getDbConnection();
@@ -8,3 +8,5 @@ try {
 } catch(PDOException $pdoex) {
     returnError($pdoex);
 }
+
+?>

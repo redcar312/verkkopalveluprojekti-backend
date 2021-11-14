@@ -14,7 +14,7 @@ create table product (
     image varchar(64),
     category_id int not null,
     index category_id(category_id),
-    foreign key(category_id) references category(id),
+    foreign key(category_id) references category(id)
     on delete restrict
 );
 
@@ -32,18 +32,18 @@ create table `order` (
     order_date timestamp default current_timestamp,
     customer_id int not null,
     index customer_id(customer_id),
-    foreign key (customer_id) references customer(id),
+    foreign key (customer_id) references customer(id)
     on delete restrict
 );
 
 create table order_row (
     order_id int not null,
     index order_id(order_id),
-    foreign key order_id references `order`(id),
-    on delete restrict,
-    product id int not null,
+    product_id int not null,
     index product_id(product_id),
-    foreign key (product_id) references product(id),
+    foreign key (product_id) references product(id)
+    on delete restrict,
+    foreign key (order_id) references `order`(id)
     on delete restrict
 );
 

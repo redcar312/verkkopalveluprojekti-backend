@@ -47,6 +47,7 @@ create table order_row (
     on delete restrict
 );
 
+
 insert into category(name) value ('Tietokoneet');
 insert into category(name) value ('Puhelimet');
 insert into category(name) value ('Kodinkoneet');

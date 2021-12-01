@@ -72,7 +72,7 @@ try{
 function createUser(PDO $db, $fname, $lname, $uname, $passwd){
     $fname = filter_var($fname, FILTER_SANITIZE_STRING);
     $lname = filter_var($lname, FILTER_SANITIZE_STRING);
-    $uname = filter_var($username, FILTER_SANITIZE_STRING);
+    $uname = filter_var($uname, FILTER_SANITIZE_STRING);
     $passwd = filter_var($passwd, FILTER_SANITIZE_STRING);
 
 
@@ -86,7 +86,7 @@ function createUser(PDO $db, $fname, $lname, $uname, $passwd){
         echo '<br>'.$e->getMessage();
     }
 }
-}
+
 
 
 

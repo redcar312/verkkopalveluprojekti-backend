@@ -2,19 +2,12 @@
 require_once '../headers.php';
 require_once '../functions.php';
 
+$search = $_GET['name'];
+
 try {
     $db = getDbConnection();
-    $search = 'Mikroaaltouuni';
 
-    $sql = "SELECT * FROM product WHERE name = :search";
-    $prepared = $db->prepare($sql);
-    $prepared->bindParam(':search', $search);
-
-    $prepared->execute();
-
-    foreach($prepared as $row) {
-        echo $row['name'];
-    }
+    selectAsJson($db, "SELECT name, price, image FROM product WHERE name = '$search'");
 
 } catch(PDOException $pdoex) {
     returnError($pdoex);

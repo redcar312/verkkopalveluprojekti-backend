@@ -2,7 +2,7 @@
 require_once '../headers.php';
 require_once '../functions.php';
 
-$search = $_POST['name'];
+$search = $_GET['name'];
 
 try {
     $db = getDbConnection();

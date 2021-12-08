@@ -51,8 +51,12 @@ create table order_row (
 insert into category(name) value ('Tietokoneet');
 insert into category(name) value ('Puhelimet');
 insert into category(name) value ('Kodinkoneet');
+insert into category(name) value ('Oheislaitteet');
+insert into category(name) value ('Viihde');
 
 insert into product(name, price, image, category_id) values ('Läppäri', 999, 'placeholder.png', 1);
 insert into product(name, price, image, category_id) values ('Läppäri', 1999, 'placeholder.png', 1);
 insert into product(name, price, image, category_id) values ('iPhone', 1999, 'placeholder.png', 2);
 insert into product(name, price, image, category_id) values ('Mikroaaltouuni', 99, 'placeholder.png', 3);
+insert into product(name, price, image, category_id) values ('Pelinäppäimistö', 99, 'placeholder.png', 4);
+insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'placeholder.png', 5);

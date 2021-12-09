@@ -3,6 +3,7 @@ require_once '../headers.php';
 require_once '../functions.php';
 
 $search = $_GET['name'];
+$search = filter_var($search, FILTER_SANITIZE_STRING);
 
 try {
     $db = getDbConnection();

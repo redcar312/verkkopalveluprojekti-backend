@@ -14,7 +14,7 @@ $cart = $input->cart;
 $db = null; //declare and initialize variable for database connection
 
 try {
-    $db = openDb(); //open database connection
+    $db = getDbConnection(); //open database connection
 
     $db->beginTransaction(); //execute all database acrtions within transaction
 

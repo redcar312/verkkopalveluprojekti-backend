@@ -30,8 +30,6 @@ function returnError(PDOException $pdoex): void {
     echo json_encode($error);
     exit;
 }
-<<<<<<< HEAD
-=======
 function createTable(PDO $con){
     $sql = "CREATE TABLE IF NOT EXISTS user(
      firstname varchar(64) not null,
@@ -92,6 +90,5 @@ function createUser(PDO $db, $fname, $lname, $uname, $passwd){
 
 
 
->>>>>>> a1191a2a184054f78773957e97d442a5901b9453
 
 ?>

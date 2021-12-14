@@ -13,7 +13,7 @@ create table product (
     price double (10, 2) not null,
     image varchar(64),
     category_id int not null,
-    info varchar(256),
+    info varchar(500),
     index category_id(category_id),
     foreign key(category_id) references category(id)
     on delete restrict

@@ -71,3 +71,10 @@ insert into product(name, price, image, category_id) values ('Pelinäppäimistö
 insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'ps2.png', 5);
 
 /* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */
+
+/*
+UPDATET testituotteille:
+UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
+UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
+
+ */

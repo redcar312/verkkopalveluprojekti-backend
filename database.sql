@@ -61,6 +61,7 @@ insert into category(name) value ('Puhelimet');
 insert into category(name) value ('Kodinkoneet');
 insert into category(name) value ('Oheislaitteet');
 insert into category(name) value ('Viihde');
+INSERT INTO category(name) VALUES("Virvokkeet");
 
 insert into product(name, price, image, category_id) values ('Läppäri', 999, 'lappari1.png', 1);
 insert into product(name, price, image, category_id) values ('Läppäri', 1999, 'lappari2.png', 1);

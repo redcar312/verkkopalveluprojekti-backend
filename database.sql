@@ -48,16 +48,13 @@ create table order_row (
     on delete restrict
 );
 
-<<<<<<< HEAD
-create table kayttaja(
+create table kayttaja (
     id int primary key auto_increment,
     firstname varchar(64),
     lastname varchar(64),
     username varchar(64),
     password varchar(64)
 );
-=======
->>>>>>> 7b3725ec5d55a85958534d44186ea26137c969cb
 
 insert into category(name) value ('Tietokoneet');
 insert into category(name) value ('Puhelimet');

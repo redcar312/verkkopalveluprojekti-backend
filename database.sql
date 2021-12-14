@@ -94,9 +94,11 @@ insert into product(name, price, image, category_id, info) values ('12 x 0.5l Sa
 
 /* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */
 
+/* infotekstiboksin lisäys: ALTER TABLE product ADD info VARCHAR(500); */
+
 /*
 UPDATET testituotteille:
 UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
 UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
 
- */
+*/

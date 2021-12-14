@@ -89,7 +89,7 @@ insert into product(name, price, image, category_id, info) values ('TV 42"', 500
 insert into product(name, price, image, category_id, info) values ('TV 65"', 700, 'tv65.png', 5, 'Älykäs Crystal UHD -televisio, jossa on aito 4K-resoluutio, elävät värit, syvät mustat ja terävä kontrasti.');
 insert into product(name, price, image, category_id, info) values ('Videotykki', 499, 'videotykki.png', 5, 'Projektori sopii erityisesti yrityskäyttöön. Sen kristallilasiset linssit takaavat selkeän ja terävän kuvan vivahteikkailla väreillä');
 insert into product(name, price, image, category_id, info) values ('24 x 0,33l Lappari', 29, 'placeholder.png', 6, 'Jokaisen suomalaisen kestosuosikki suoraan omalta pienpanimolta');
-insert into product(name, price, image, category_id, info) values ('12 x 0.5l Santtu', 29, 'placeholder.png', 6, 'Kesäillan pelastus');
+insert into product(name, price, image, category_id, info) values ('12 x 0.5l Santtu', 35, 'placeholder.png', 6, 'Kesäillan pelastus');
 
 
 /* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */

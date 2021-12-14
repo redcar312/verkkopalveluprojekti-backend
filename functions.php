@@ -21,7 +21,7 @@ function selectAsJson(object $db, string $sql): void {
 
 function executeInsert(object $db, string $sql): int {
     $query = $db->query($sql);
-    return $db->lasInsertId();
+    return $db->lastInsertId();
 }
 
 function returnError(PDOException $pdoex): void {

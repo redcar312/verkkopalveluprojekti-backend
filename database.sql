@@ -69,6 +69,5 @@ insert into product(name, price, image, category_id) values ('iPhone', 1999, 'ip
 insert into product(name, price, image, category_id) values ('Mikroaaltouuni', 99, 'mikro1.png', 3);
 insert into product(name, price, image, category_id) values ('Pelinäppäimistö', 99, 'keyboard1.png', 4);
 insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'ps2.png', 5);
-insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'placeholder.png', 5);
 
 /* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */

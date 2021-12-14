@@ -13,13 +13,14 @@ create table product (
     price double (10, 2) not null,
     image varchar(64),
     category_id int not null,
+    info varchar(500),
     index category_id(category_id),
     foreign key(category_id) references category(id)
     on delete restrict
 );
 
 create table customer (
-    id int primary key auto_increment,
+    id int primary key,
     firstname varchar(64) not null,
     lastname varchar(64) not null,
     address varchar(100) not null,
@@ -47,12 +48,22 @@ create table order_row (
     on delete restrict
 );
 
+create table kayttaja(
+    id int primary key auto_increment,
+    firstname varchar(64),
+    lastname varchar(64),
+    username varchar(64),
+    password varchar(64)
+);
+
 insert into category(name) value ('Tietokoneet');
 insert into category(name) value ('Puhelimet');
 insert into category(name) value ('Kodinkoneet');
 insert into category(name) value ('Oheislaitteet');
 insert into category(name) value ('Viihde');
+INSERT INTO category(name) VALUES("Virvokkeet");
 
+<<<<<<< HEAD
 insert into product(name, price, image, category_id, info) values ('Läppäri', 999, 'lappari1.png', 1, Tehokkaalla suorittimella varustettua tyylikästä kannettavaa voi käyttää sujuvasti koko päivän ajan - se sopii siis erinomaisesti liikkuville ammattilaisille);
 insert into product(name, price, image, category_id, info) values ('Läppäri', 1999, 'lappari2.png', 1, Huikea kannettava RTX 3060 -näytönohjaimella ja Ryzen 9 5900HS -prosessorilla);
 insert into product(name, price, image, category_id, info) values ('Pelitietokone', 3500, 'pelitietokone.png', 1, Ensiluokkaisesta suorituskyvystä vastaa AMD:n Ryzen 5 5600X -suoritin, NVIDIAn GeForce RTX 3090 -näytönohjain, 16 Gt nopeaa DDR4-muistia sekä Windows 10 Pro. Malli on varustettu huippunopealla 1 Tt:n NVMe SSD -kovalevyllä.);
@@ -78,3 +89,20 @@ insert into product(name, price, image, category_id, info) values ('Pelikonsoli'
 insert into product(name, price, image, category_id, info) values ('TV 42"', 500, 'tv42.png', 5, Nauti terävästä kuvanlaadusta elävillä väreillä ja rikkailla äänillä 42-tuumaisen Full HD -älytelevision avulla, jossa on Android TV 8.0 -tuki);
 insert into product(name, price, image, category_id, info) values ('TV 65"', 700, 'tv65.png', 5, Älykäs Crystal UHD -televisio, jossa on aito 4K-resoluutio, elävät värit, syvät mustat ja terävä kontrasti.);
 insert into product(name, price, image, category_id, info) values ('Videotykki', 499, 'videotykki.png', 5, Projektori sopii erityisesti yrityskäyttöön. Sen kristallilasiset linssit takaavat selkeän ja terävän kuvan vivahteikkailla väreillä);
+=======
+insert into product(name, price, image, category_id) values ('Läppäri', 999, 'lappari1.png', 1);
+insert into product(name, price, image, category_id) values ('Läppäri', 1999, 'lappari2.png', 1);
+insert into product(name, price, image, category_id) values ('iPhone', 1999, 'iphone.png', 2);
+insert into product(name, price, image, category_id) values ('Mikroaaltouuni', 99, 'mikro1.png', 3);
+insert into product(name, price, image, category_id) values ('Pelinäppäimistö', 99, 'keyboard1.png', 4);
+insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'ps2.png', 5);
+
+/* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */
+
+/*
+UPDATET testituotteille:
+UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
+UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
+
+ */
+>>>>>>> ebdf8dc0efc7880ee3733f870d03372773796172

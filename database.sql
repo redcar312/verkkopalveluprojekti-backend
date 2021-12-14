@@ -64,7 +64,7 @@ insert into category(name) value ('Viihde');
 INSERT INTO category(name) VALUES("Virvokkeet");
 
 insert into product(name, price, image, category_id, info) values ('Läppäri', 999, 'lappari1.png', 1, Tehokkaalla suorittimella varustettua tyylikästä kannettavaa voi käyttää sujuvasti koko päivän ajan - se sopii siis erinomaisesti liikkuville ammattilaisille);
-insert into product(name, price, image, category_id, info) values ('Läppäri', 1999, 'lappari2.png', 1, Huikea kannettava RTX 3060 -näytönohjaimella ja Ryzen 9 5900HS -prosessorilla);
+insert into product(name, price, image, category_id, info) values ('Läppäri 2', 1999, 'lappari2.png', 1, Huikea kannettava RTX 3060 -näytönohjaimella ja Ryzen 9 5900HS -prosessorilla);
 insert into product(name, price, image, category_id, info) values ('Pelitietokone', 3500, 'pelitietokone.png', 1, Ensiluokkaisesta suorituskyvystä vastaa AMD:n Ryzen 5 5600X -suoritin, NVIDIAn GeForce RTX 3090 -näytönohjain, 16 Gt nopeaa DDR4-muistia sekä Windows 10 Pro. Malli on varustettu huippunopealla 1 Tt:n NVMe SSD -kovalevyllä.);
 insert into product(name, price, image, category_id, info) values ('Peliläppäri', 2999, 'pelilappari.png', 1,  Mahtavaa suorituskykyä vaativampaankin pelaamiseen.);
 insert into product(name, price, image, category_id, info) values ('Toimistokone', 500, 'toimistokone.png', 1, Kone on varustettu tehokkaalla Intel i5 -suorittimella, 8GB keskusmuistilla ja nopealla SSD kiintolevyllä);

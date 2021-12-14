@@ -19,7 +19,7 @@ create table product (
 );
 
 create table customer (
-    id int primary key auto_increment,
+    id int primary key,
     firstname varchar(64) not null,
     lastname varchar(64) not null,
     address varchar(100) not null,
@@ -60,3 +60,5 @@ insert into product(name, price, image, category_id) values ('iPhone', 1999, 'ip
 insert into product(name, price, image, category_id) values ('Mikroaaltouuni', 99, 'placeholder.png', 3);
 insert into product(name, price, image, category_id) values ('Pelinäppäimistö', 99, 'keyboard1.png', 4);
 insert into product(name, price, image, category_id) values ('Pelikonsoli', 499, 'placeholder.png', 5);
+
+/* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */

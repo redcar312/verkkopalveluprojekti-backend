@@ -102,6 +102,8 @@ insert into product(name, price, image, category_id, info) values ('12 x 0.5l Sa
 UPDATET testituotteille:
 UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
 UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
+UPDATE product SET image = "lappari24.png" WHERE name = "24 x 0,33l Lappari";
+UPDATE product SET image = "santtu.png" WHERE name = "12 x 0.5l Santtu";
 
 ORDER_ROW TUOTTEIDEN MÄÄRÄ:
 ALTER TABLE order_row ADD amount DOUBLE(10,2) NOT NULL

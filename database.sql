@@ -42,6 +42,8 @@ create table order_row (
     index order_id(order_id),
     product_id int not null,
     index product_id(product_id),
+    amount double(10, 2) not null,
+    final_sum double(10, 2) not null,
     foreign key (product_id) references product(id)
     on delete restrict,
     foreign key (order_id) references `order`(id)
@@ -88,8 +90,8 @@ insert into product(name, price, image, category_id, info) values ('Pelikonsoli'
 insert into product(name, price, image, category_id, info) values ('TV 42"', 500, 'tv42.png', 5, 'Nauti terävästä kuvanlaadusta elävillä väreillä ja rikkailla äänillä 42-tuumaisen Full HD -älytelevision avulla, jossa on Android TV 8.0 -tuki');
 insert into product(name, price, image, category_id, info) values ('TV 65"', 700, 'tv65.png', 5, 'Älykäs Crystal UHD -televisio, jossa on aito 4K-resoluutio, elävät värit, syvät mustat ja terävä kontrasti.');
 insert into product(name, price, image, category_id, info) values ('Videotykki', 499, 'videotykki.png', 5, 'Projektori sopii erityisesti yrityskäyttöön. Sen kristallilasiset linssit takaavat selkeän ja terävän kuvan vivahteikkailla väreillä');
-insert into product(name, price, image, category_id, info) values ('24 x 0,33l Lappari', 29, 'placeholder.png', 6, 'Jokaisen suomalaisen kestosuosikki suoraan omalta pienpanimolta');
-insert into product(name, price, image, category_id, info) values ('12 x 0.5l Santtu', 35, 'placeholder.png', 6, 'Saunaillan  sankari');
+insert into product(name, price, image, category_id, info) values ('24 x 0,33l Lappari', 29, 'lappari24.png', 6, 'Jokaisen suomalaisen kestosuosikki suoraan omalta pienpanimolta');
+insert into product(name, price, image, category_id, info) values ('12 x 0.5l Santtu', 35, 'santtu.png', 6, 'Saunaillan  sankari');
 
 
 /* AUTO_INCREMENT pois: ALTER TABLE customer CHANGE id id int; */
@@ -100,5 +102,10 @@ insert into product(name, price, image, category_id, info) values ('12 x 0.5l Sa
 UPDATET testituotteille:
 UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
 UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
+UPDATE product SET image = "lappari24.png" WHERE name = "24 x 0,33l Lappari";
+UPDATE product SET image = "santtu.png" WHERE name = "12 x 0.5l Santtu";
 
+ORDER_ROW TUOTTEIDEN MÄÄRÄ:
+ALTER TABLE order_row ADD amount DOUBLE(10,2) NOT NULL
+ALTER TABLE order_row ADD final_sum DOUBLE(10,2) NOT NULL
 */

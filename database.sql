@@ -50,11 +50,7 @@ create table order_row (
     on delete restrict
 );
 
-<<<<<<< HEAD
-create table kayttaja (
-=======
 create table kayttaja(
->>>>>>> ea6feed23e4faf8741a273208c2dd088efba02cd
     id int primary key auto_increment,
     firstname varchar(64),
     lastname varchar(64),

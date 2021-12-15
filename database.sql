@@ -42,6 +42,8 @@ create table order_row (
     index order_id(order_id),
     product_id int not null,
     index product_id(product_id),
+    amount double(10, 2) not null,
+    final_sum double(10, 2) not null,
     foreign key (product_id) references product(id)
     on delete restrict,
     foreign key (order_id) references `order`(id)
@@ -99,4 +101,7 @@ UPDATET testituotteille:
 UPDATE product SET image = "mikro1.png" WHERE name = "Mikroaaltouuni";
 UPDATE product SET image = "ps2.png" WHERE name = "Pelikonsoli";
 
+ORDER_ROW TUOTTEIDEN MÄÄRÄ:
+ALTER TABLE order_row ADD amount DOUBLE(10,2) NOT NULL
+ALTER TABLE order_row ADD final_sum DOUBLE(10,2) NOT NULL
 */

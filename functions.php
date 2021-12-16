@@ -32,7 +32,32 @@ function returnError(PDOException $pdoex): void {
 }
 
         
-
+function checkUser (PDO $db,$username,$passwd){
+    $json = json_decode(file_get_contents('php://input'));
+    $username = filter_var($username, FILTER_SANITIZE_STRING);
+    $passwd = filter_var($passwd, FILTER_SANITIZE_STRING);
+    
+    try{
+    
+    $sql = "SELECT password FROM kayttaja WHERE username=?";
+    $prepare = $db->prepare($sql);
+    $prepare->execute(array($username));
+    
+    $rows = $prepare->fetchAll();
+    foreach($rows as $row){
+        $pw = $row["password"];
+        if(password_verify($passwd, $pw)){
+            return true;
+        }
+    }
+    
+     return false;
+    } catch(PDOException $e){
+        echo '<br>'.$e->getMessage();
+    }
+    
+    }
+    
 
 
 

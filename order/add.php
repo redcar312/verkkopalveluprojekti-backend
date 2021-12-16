@@ -36,10 +36,12 @@ try {
 
         //insert order rows by looping trough cart (which is an array).
         foreach ($cart as $product) {
-            $sql = "insert into `order_row` (order_id, product_id) values ("
+            $sql = "insert into `order_row` (order_id, product_id, amount, product_price) values ("
             .
                 $order_id . "," .
-                $product->id 
+                $product->id . "," .
+                $product->amount . "," .
+                $product->price
             . ")";
             executeInsert($db, $sql);
         }

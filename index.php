@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
     require_once '../headers.php';
    require_once '../functions.php';
 
@@ -18,6 +19,9 @@
     } catch(PDOException $e) {
         echo '<br>'.$e->getMessage();}
       
+=======
+  
+>>>>>>> 238d765d23cc9a8fe2627c893725d936459a3555
 /* https://github.com/redcar312/verkkopalveluprojekti-backend */
 /* https://github.com/redcar312/verkkopalveluprojekti-backend */
 

@@ -8,7 +8,6 @@
     $uname = filter_var( $json->$uname, FILTER_SANITIZE_STRING);
     $passwd = filter_var( $json->$passwd, FILTER_SANITIZE_STRING);  
     
-<<<<<<< HEAD
     
     try{
         $db = getDbConnection();
@@ -19,9 +18,7 @@
     } catch(PDOException $e) {
         echo '<br>'.$e->getMessage();}
       
-=======
 /* https://github.com/redcar312/verkkopalveluprojekti-backend */
->>>>>>> ea6feed23e4faf8741a273208c2dd088efba02cd
 /* https://github.com/redcar312/verkkopalveluprojekti-backend */
 
 /* Uudelleen nimeä kansio: verkkopalveluprojekti-backend -> verkkopalveluprojekti_ryhma_5 */

@@ -11,6 +11,7 @@ create table product (
     id int primary key auto_increment,
     name varchar(64) not null,
     price double (10, 2) not null,
+    index price(price),
     image varchar(64),
     category_id int not null,
     info varchar(500),
@@ -20,7 +21,7 @@ create table product (
 );
 
 create table customer (
-    id int primary key,
+    id int primary key auto_increment,
     firstname varchar(64) not null,
     lastname varchar(64) not null,
     address varchar(100) not null,
@@ -42,8 +43,8 @@ create table order_row (
     index order_id(order_id),
     product_id int not null,
     index product_id(product_id),
-    amount double(10, 2) not null,
-    final_sum double(10, 2) not null,
+    amount int not null,
+    product_price float(10, 2) not null,
     foreign key (product_id) references product(id)
     on delete restrict,
     foreign key (order_id) references `order`(id)
@@ -58,12 +59,16 @@ create table kayttaja(
     password varchar(64)
 );
 
+UPDATE order_row
+INNER JOIN product ON order_row.product_id = product.id
+SET order_row.product_price = product.price;
+
 insert into category(name) value ('Tietokoneet');
 insert into category(name) value ('Puhelimet');
 insert into category(name) value ('Kodinkoneet');
 insert into category(name) value ('Oheislaitteet');
 insert into category(name) value ('Viihde');
-INSERT INTO category(name) VALUES("Virvokkeet");
+insert into category(name) value ("Virvokkeet");
 
 insert into product(name, price, image, category_id, info) values ('Läppäri 15.6"', 999, 'lappari1.png', 1, 'Tehokkaalla suorittimella varustettua tyylikästä kannettavaa voi käyttää sujuvasti koko päivän ajan - se sopii siis erinomaisesti liikkuville ammattilaisille');
 insert into product(name, price, image, category_id, info) values ('Läppäri 17.3"', 1999, 'lappari2.png', 1, 'Huikea kannettava RTX 3060 -näytönohjaimella ja Ryzen 9 5900HS -prosessorilla');
@@ -106,6 +111,6 @@ UPDATE product SET image = "lappari24.png" WHERE name = "24 x 0,33l Lappari";
 UPDATE product SET image = "santtu.png" WHERE name = "12 x 0.5l Santtu";
 
 ORDER_ROW TUOTTEIDEN MÄÄRÄ:
-ALTER TABLE order_row ADD amount DOUBLE(10,2) NOT NULL
+ALTER TABLE order_row ADD amount int NOT NULL
 ALTER TABLE order_row ADD final_sum DOUBLE(10,2) NOT NULL
 */
